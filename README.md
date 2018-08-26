@@ -1,1 +1,2 @@
 # Employee-Directory
+This project was about using  Random User Generator API which included making Ajax calls using jQuery and  parsing and formatting JSON .I requested a JSON object from the API and parsed the data so that 12 employees are listed in a grid with their thumbnail image, full name, email, and city.Clicking the employee information in the grid will open a modal window with more detailed information.The modal window can be closed by clicking outside the modal.',
