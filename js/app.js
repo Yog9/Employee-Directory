@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	function capitalise(string){
 		return string.charAt(0).toUpperCase() + string.slice(1);
-	}	
+	}
 	$.ajax({
 			url: 'https://randomuser.me/api/?results=12&nat=us',
 			dataType: 'json',
@@ -23,30 +23,12 @@ $(document).ready(function(){
 					html_grid+='<p class="heading">'+capitalise(first_name)+' '+capitalise(last_name)+'</p>';
 					html_grid+='<p class="email">'+mail+'</p>';
 					html_grid+='<p class="place">'+capitalise(city)+'</p>';
-					html_grid+='</div>';//close details class 
+					html_grid+='</div>';//close details class
 					html_grid+='</div>';//close item class
 					$('.container').html(html_grid);
 				}//for closed
 				}
-				employee_grid();
-				function employee_details(i)
-				{
-					var c="";
-					var img = data.results[i].picture.medium;
-					var first_name = data.results[i].name.first;
-					var last_name = data.results[i].name.last;
-					var city = data.results[i].location.city;
-					var mail = data.results[i].email;
-					c+='<div class="details">';
-					c+='<div class ="item" id ="'+i+'">';
-					c+='<img src ="'+img+'" class="profile-img">';
-					c+='<p class="heading">'+capitalise(first_name)+' '+capitalise(last_name)+'</p>';
-					c+='<p class="email">'+mail+'</p>';
-					c+='<p class="place">'+capitalise(city)+'</p>';
-					c+='</div>';//close details class 
-					c+='</div>';//close item class
-					$('.container').html(c);
-				}
+				
 
 				function buildModal(i)
 				{
@@ -80,7 +62,7 @@ $(document).ready(function(){
 					$('.modal').show();
 				}
 			$('.details').on('click', function(e){
-				if(e.target.id) 
+				if(e.target.id)
 				{
 			 		index = e.target.id;
 					console.log('index'+index);
@@ -95,38 +77,21 @@ $(document).ready(function(){
 					$('.modal').hide();
 				}//if closed
 			}//window closed
-			var search_butt= document.querySelector('button');
+		
 			var user_input_search= document.querySelector('#search-box');
 			 user_input_search.addEventListener("keyup",()=>{
-				var user_input = user_input_search.value.toLowerCase();
-				console.log(user_input);
-				for(i=0;i<12;i++)
-				{
-					var first_nam= data.results[i].name.first;
-					first_nam = first_nam.toLowerCase();
-					//console.log(first_nam);
-					var last_nam= data.results[i].name.last;
-					last_nam = last_nam.toLowerCase();
-					//console.log(last_nam);
-					var full_name = first_nam+' '+last_nam;
-					console.log(full_name);
-					if((full_name.includes(user_input)))
-					{
-						console.log("matched");
-						employee_details(i);
-						
-					}
-					else 
+				var employees=document.querySelectorAll('.details');
 
-					{
-						console.log("not matched");
-						employee_grid();
+      for ( var i = 0; i < employees.length; i++) {
+				        var p = employees[i].getElementsByTagName("p")[0];
+        if (p.innerHTML.toUpperCase().includes(user_input_search.value.toUpperCase())) {
+            employees[i].style.display = "";
+        } else {
+            employees[i].style.display = "none";
+        }
+    }
+	});
 
-					}
-				}
-	
-			});
-			
 
 			}//sucess closed
 		});	//ajax closed
