@@ -8,8 +8,9 @@ Employee Directory used a random user API to generate random users and generate 
 The purpose of this project was to understand more about communicating with a third-party API using JQuery.
 
 ### Getting Started
- Click the demo link or clone/download the repository on your local machine and open the index.html file with a browser.
- Click the employee information in the grid to open a modal window with more detailed information.The modal window can be        closed by clicking outside the modal.Enter the name of employee in the search box to filter the directory by employee name.
+ * Click the demo link or clone/download the repository on your local machine and open the index.html file with a browser.
+ * Click the employee information in the grid to open a modal window with more detailed information.The modal window can be        closed by clicking outside the modal.
+ * Enter the name of employee in the search box to filter the directory by employee name.
  
  ### Thoughts
  I need find different implementation  because the code is not DRY as it should be. Need to study more to refer the working examples of similar type of projects.I m still not sure how can I call an event listener on dynamically added elements.
