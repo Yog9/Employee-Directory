@@ -13,7 +13,7 @@ The purpose of this project was to understand more about communicating with a th
  * Enter the name of employee in the search box to filter the directory by employee name.
  
  ### Thoughts
- I need find different implementation  because the code is not DRY as it should be. Need to study more to refer the working examples of similar type of projects.I m still not sure how can I call an event listener on dynamically added elements.
+I need to find a different implementation because the code is redundant. Also, I need to refer some working examples of the similar type of projects to overcome the redundancy in the code.I am still not sure how can I use javascript to call an event listener on dynamically added elements.
  
 ### Built With
 * HTML5 
@@ -25,7 +25,7 @@ The purpose of this project was to understand more about communicating with a th
 ### Features
 **1. Responsive Design**
 
-**2. Compatible on Chrome 51.0.2704.63 and Firefox 46.0.1**
+**2. Compatible on Chrome 68.0.3440.106 and Firefox 62.0(64-bit)**
 
 **3. Hover state employee information**
 
@@ -35,4 +35,4 @@ The purpose of this project was to understand more about communicating with a th
 
 ### Coming Soon 
 - [ ] Add a way to move back and forth between employee detail windows when the modal window is open.
-- [ ]  Closing the modal by clicking the dynamically added element rather that clicking outside the box.
+- [ ] Closing the modal by clicking the dynamically added element rather that clicking outside the box.
