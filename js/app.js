@@ -1,3 +1,4 @@
+
 $(document).ready(function(){
 	function capitalise(string){
 		return string.charAt(0).toUpperCase() + string.slice(1);
@@ -124,4 +125,8 @@ var items=document.querySelectorAll(".grid-item");
 			}//sucess closed
 		});	//ajax closed
 });//end of document.ready()
+
+
+
+
 

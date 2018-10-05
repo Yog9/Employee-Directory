@@ -2,7 +2,6 @@ body
 {
 	font-family:'Roboto Condensed', sans-serif;
 }
-
 .h1_search
 {
 	display:flex;
@@ -17,8 +16,6 @@ h1 {
 }
 input
 {
-	/*display:inline-block;*/
-	
 	border-radius:40px;
 	outline:transparent;
 	border:1px solid lightgrey;
@@ -64,12 +61,6 @@ padding-bottom: 5px;
 	color: rgba(146, 145, 145, 1);
 
 }
-
-
-
-
-
-
 .grid-item
 {
 	display:flex;
@@ -183,3 +174,5 @@ h1 {
 }
 
 }
+
+
